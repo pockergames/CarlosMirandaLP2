@@ -8,41 +8,46 @@ namespace ConsoleApplication1
 {
     class Program
     {
+        struct CARRO
+        {
+            public string modelo;
+            public double km;
+            public double pot;
+        }
+
         static void Main(string[] args)
         {
             int carros, j = 0;
             Console.WriteLine("Informe o a quantidade de carros a serem analisados");
             carros = Convert.ToInt32(Console.ReadLine());
-            string[] modelo = new string[carros];
-            double[] km = new double[carros];
-            double[] pot = new double[carros];
+            CARRO[] carroModel = new CARRO[carros];
 
             while (j < carros)
             {
                 Console.WriteLine("Informe o modelo do carro {0}", j + 1);
-                modelo[j] = Console.ReadLine();
+                carroModel[j].modelo = Console.ReadLine();
                 Console.WriteLine("Informe a quilometragem do carro {0}", j + 1);
-                km[j] = Convert.ToDouble(Console.ReadLine());
+                carroModel[j].km = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("Informe a potência do carro {0}", j + 1);
-                pot[j] = Convert.ToDouble(Console.ReadLine());
+                carroModel[j].pot = Convert.ToDouble(Console.ReadLine());
                 j++;
             }
 
             
             for (int i = 0; i < carros; i++)
             {
-                Console.WriteLine(Classificar(modelo[i], km[i], pot[i]));
+                Console.WriteLine(Classificar(carroModel[i]));
             }
             
         }
-        static string Classificar(string modelo, double km, double pot)
+        static string Classificar(CARRO carro)
         {
             string classKm, classPot;
-            if (km <= 5000)
+            if (carro.km <= 5000)
             {
                 classKm = "Novo";
             }
-            else if (km > 5000 && km <= 30000)
+            else if (carro.km > 5000 && carro.km <= 30000)
             {
                 classKm = "Semi-novo";
             }
@@ -50,11 +55,11 @@ namespace ConsoleApplication1
             {
                 classKm = "Velho";
             }
-            if (pot < 120)
+            if (carro.pot < 120)
             {
                 classPot = "Popular";
             }
-            else if (pot >= 120 && pot <= 200)
+            else if (carro.pot >= 120 && carro.pot <= 200)
             {
                 classPot = "Forte";
             }
@@ -62,7 +67,7 @@ namespace ConsoleApplication1
             {
                 classPot = "Potente";
             }
-            string resp = modelo + " - " + classKm + " - " + classPot;
+            string resp = carro.modelo + " - " + classKm + " - " + classPot;
             return resp;
         }
 

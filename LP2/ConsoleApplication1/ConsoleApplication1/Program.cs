@@ -40,7 +40,7 @@ namespace ConsoleApplication1
             }
             
         }
-        static string Classificar(CARRO carro)
+        public static string Classificar(CARRO carro)
         {
             string classKm, classPot;
             if (carro.km <= 5000)

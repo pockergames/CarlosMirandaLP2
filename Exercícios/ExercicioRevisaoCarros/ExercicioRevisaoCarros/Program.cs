@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace ExercicioRevisaoCarros
 {
     class Program
     {
@@ -33,12 +33,12 @@ namespace ConsoleApplication1
                 j++;
             }
 
-            
+
             for (int i = 0; i < carros; i++)
             {
                 Console.WriteLine(Classificar(carroModel[i]));
             }
-            
+
         }
         public static string Classificar(CARRO carro)
         {
@@ -70,10 +70,5 @@ namespace ConsoleApplication1
             string resp = carro.modelo + " - " + classKm + " - " + classPot;
             return resp;
         }
-
-
-
-
     }
 }
-

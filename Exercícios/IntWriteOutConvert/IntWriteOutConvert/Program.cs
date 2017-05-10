@@ -12,7 +12,9 @@ namespace IntWriteOutConvert
         {
             int x;
             x = IntWriteOutConvert(Console.ReadLine());
-            Console.WriteLine(x);
+            int y = IntWriteOutConvert(Console.ReadLine());
+
+            Console.WriteLine(x + y);
         }
         public static int IntWriteOutConvert(string number)
         {
@@ -22,71 +24,71 @@ namespace IntWriteOutConvert
 
             if (number == "zero")
                 unidade = 0;
-            else if (number.EndsWith("um") == true)
+            else if (number.EndsWith("um"))
                 unidade = 1;
-            else if (number.EndsWith("dois") == true)
+            else if (number.EndsWith("dois"))
                 unidade = 2;
-            else if (number.EndsWith("três") == true)
+            else if (number.EndsWith("três"))
                 unidade = 3;
-            else if (number.EndsWith("quatro") == true)
+            else if (number.EndsWith("quatro"))
                 unidade = 4;
-            else if (number.EndsWith("cinco") == true)
+            else if (number.EndsWith("cinco"))
                 unidade = 5;
-            else if (number.EndsWith("seis") == true && number.StartsWith("dez") == false)
+            else if (number.EndsWith("seis") && !number.StartsWith("dez"))
                 unidade = 6;
-            else if (number.EndsWith("sete") == true && number.StartsWith("dez") == false)
+            else if (number.EndsWith("sete") && !number.StartsWith("dez"))
                 unidade = 7;
-            else if (number.EndsWith("oito") == true && number.StartsWith("dez") == false)
+            else if (number.EndsWith("oito") && !number.StartsWith("dez"))
                 unidade = 8;
-            else if (number.EndsWith("nove") == true && number.StartsWith("dez") == false)
+            else if (number.EndsWith("nove") && !number.StartsWith("dez"))
                 unidade = 9;
 
 
-            if (number.EndsWith("dez") == true)
+            if (number.EndsWith("dez"))
             {
                 unidade = 0;
                 dezena = 10;
             }
-            else if (number.EndsWith("onze") == true)
+            else if (number.EndsWith("onze"))
             {
                 unidade = 1;
                 dezena = 10;
             }
-            else if (number.EndsWith("doze") == true)
+            else if (number.EndsWith("doze"))
             {
                 unidade = 2;
                 dezena = 10;
             }
-            else if (number.EndsWith("treze") == true)
+            else if (number.EndsWith("treze"))
             {
                 unidade = 3;
                 dezena = 10;
             }
-            else if (number.EndsWith("quatorze") == true || number.EndsWith("catorze") == true)
+            else if (number.EndsWith("quatorze") || number.EndsWith("catorze"))
             {
                 unidade = 4;
                 dezena = 10;
             }
-            else if (number.EndsWith("quinze") == true)
+            else if (number.EndsWith("quinze"))
             {
                 unidade = 5;
                 dezena = 10;
             }
-            else if (number.EndsWith("dezesseis") == true)
+            else if (number.EndsWith("dezesseis"))
             {
-                return 16;
+                dezena = 16;
             }
-            else if (number.EndsWith("dezessete") == true)
+            else if (number.EndsWith("dezessete"))
             {
-                return 17;
+                dezena = 17;
             }
-            else if (number.EndsWith("dezoito") == true)
+            else if (number.EndsWith("dezoito"))
             {
-                return 18;
+                dezena = 18;
             }
-            else if (number.EndsWith("dezenove") == true)
+            else if (number.EndsWith("dezenove"))
             {
-                return 19;
+                dezena = 19;
             }
 
 
@@ -109,7 +111,7 @@ namespace IntWriteOutConvert
                 else if (number[i] == 'n' && number[i + 1] == 'o' && number[i + 2] == 'v' && number[i + 3] == 'e' && number[i + 4] == 'n')
                     dezena = 90;
             }
-            if (number.StartsWith("cento"))
+            if (number.StartsWith("cento") || number == "cem")
             {
                 centena = 100;
             }

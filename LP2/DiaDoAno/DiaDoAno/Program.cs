@@ -25,7 +25,14 @@ namespace DiaDoAno
             string data;
             Console.WriteLine("Informe a data");
             data = Console.ReadLine();
-            dia = Convert.ToInt32(data.Substring(0, 2));
+            if ((data.Substring(1, 1)) == " ")
+            {
+                dia = Convert.ToInt32(data.Substring(0, 1));
+            }
+            else
+            {
+                dia = Convert.ToInt32(data.Substring(0, 2));
+            }
             for(int i = 1; i < mes.Length; i++)
             {
                 if (mesEx[i] == data.Substring(6, data.Length - 6))

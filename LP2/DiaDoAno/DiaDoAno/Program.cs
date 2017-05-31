@@ -11,6 +11,7 @@ namespace DiaDoAno
         static void Main(string[] args)
         {
             int[] mes = new int[12];
+            mes[0] = 0;
             for (int i = 1; i < mes.Length; i++)
             {
                 if (i == 2)
@@ -33,7 +34,7 @@ namespace DiaDoAno
             {
                 dia = Convert.ToInt32(data.Substring(0, 2));
             }
-            for(int i = 1; i < mes.Length; i++)
+            for(int i = 1; i < 13; i++)
             {
                 if (mesEx[i] == data.Substring(6, data.Length - 6))
                 {

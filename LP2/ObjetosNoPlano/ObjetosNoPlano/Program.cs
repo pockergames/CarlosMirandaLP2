@@ -29,13 +29,30 @@ namespace ObjetosNoPlano
                             obj.AndarDireita();
                             Console.WriteLine(obj.Coordenadas());
                         }
-                    
+                    else if(comando == ConsoleKey.LeftArrow && obj.x > 0 && obj.y <= a)
+                        {
+                            obj.AndarEsquerda();
+                            Console.WriteLine(obj.Coordenadas());
+                        }
+                    else if(comando == ConsoleKey.UpArrow && obj.y <= a)
+                        {
+                            obj.AndarCima();
+                            Console.WriteLine(obj.Coordenadas());
+                        }
+                    else if(comando == ConsoleKey.DownArrow && obj.y > 0)
+                        {
+                            obj.AndarBaixo();
+                            Console.WriteLine(obj.Coordenadas());
+                        }
+                    else if(comando == ConsoleKey.Escape)
+                        {
+                            Environment.Exit(0);
+                        }
+
+            }
 
 
-                }
-                
-            
-            
+
 
 
 

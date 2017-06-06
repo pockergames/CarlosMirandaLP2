@@ -11,16 +11,18 @@ namespace ObjetosNoPlano
         static void Main(string[] args)
         {
             int l = 600, a = 800;
-            int[,] plano = new int[l, a];
-            ConsoleKey comando;
-            Objeto obj = new Objeto();
-            Console.WriteLine("Posição inicial do Objeto");
+            
+            Circulo obj = new Circulo();
+
+            Console.WriteLine("Posição inicial do círculo:");
             obj.x = int.Parse(Console.ReadLine());
             obj.y = int.Parse(Console.ReadLine());
-            
 
-            
-                while (true)
+            Console.WriteLine("Raio do círculo:");
+            obj.raio = int.Parse(Console.ReadLine());
+
+            ConsoleKey comando;
+            while (true)
                 {
                     comando = Console.ReadKey().Key;
 
@@ -48,8 +50,8 @@ namespace ObjetosNoPlano
                         {
                             Environment.Exit(0);
                         }
-
             }
+                
 
 
 

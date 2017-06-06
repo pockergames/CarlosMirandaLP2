@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ObjetosNoPlano
 {
-    class Objeto
+    class Circulo
     {
-        public int x, y;
+        public int x, y, raio;
+        public string cor;
 
         public void AndarDireita()
         {

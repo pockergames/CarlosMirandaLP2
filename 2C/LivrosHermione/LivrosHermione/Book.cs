@@ -8,8 +8,6 @@ namespace LivrosHermione
 {
     class Book
     {
-        public string title;
-        public int pageN;
-        public int backtime;
+        string 
     }
 }

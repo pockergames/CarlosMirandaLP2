@@ -8,6 +8,8 @@ namespace LivrosHermione
 {
     class Book
     {
-        string 
+        public string name;
+        public int pageN;
+        public int leftT;
     }
 }

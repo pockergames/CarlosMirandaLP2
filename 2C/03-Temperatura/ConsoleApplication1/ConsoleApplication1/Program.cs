@@ -14,10 +14,12 @@ namespace ConsoleApplication1
 
             CelciusTemperature x = new CelciusTemperature();
 
-            Console.WriteLine("Insert the temperature value (only numbers*)");
+            Console.WriteLine("Insert the temperature value in Celcius (only numbers*)");
             x.value = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Value in Farenheit");
-            Console.WriteLine(x.FarenheitConvertion() + "°F");
+            Console.WriteLine("\nValue in Farenheit:");
+            Console.WriteLine("\n" + x.FarenheitConvertion() + "°F");
+            Console.WriteLine("\nValue in Kelvins:");
+            Console.WriteLine("\n" + x.KelvinConvertion() + " K");
 
 
 

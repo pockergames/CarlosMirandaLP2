@@ -9,11 +9,15 @@ namespace ConsoleApplication1
     class CelciusTemperature
     {
         public double value;
-        public double f;
+
         public double FarenheitConvertion()
         {
-            f = (value * 1.8) + 32;
-            return f;
+            return (value * 1.8) + 32;
+            
+        }
+        public double KelvinConvertion()
+        {
+            return value + 273.15;
         }
 
         

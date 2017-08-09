@@ -1,0 +1,25 @@
+#CarlosMirandaLP2
+#Mensagem.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _04_CodigoMorse
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Presse: \n1 - Codificar \n2 - Decodificar \n3 - Transmitir \n0 - Sair");
+
+            Mensagem msg = new Mensagem();
+
+            msg.Codificar(Console.ReadLine());
+
+            
+        }
+    }
+}

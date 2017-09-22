@@ -11,21 +11,21 @@ namespace ConsoleApplication1
 
         private int id;
         private string nome;
-        private double preco;
+        private int quantidade;
 
         
         public Produto(int id, string nome, double preco)
         {
             this.id = id;
             this.nome = nome;
-            this.preco = preco;
-            Quantidade = 0;
+            Preco = preco;
+            quantidade = 0;
         }
         public int Id { 
-            get{
-                return this.id;
+            get
+            {
+                return id;
             }
-            
         }
 
         public string Nome {
@@ -35,30 +35,31 @@ namespace ConsoleApplication1
             }
         }
 
-        public double Preco
-        {
-            get
+        public double Preco { get; set; }
+
+        public double Marca { get; set; }
+
+        public int Quantidade { get
             {
-                return preco;
+                return quantidade;
             }
         }
-        public int Quantidade { get; set; }
 
         public void Reposicao(int qtd)
         {
-            Quantidade += qtd;
+            quantidade += qtd;
         }
 
         public void Retirada(int qtd)
         {
-            if (Quantidade >= qtd)
-                Quantidade -= qtd;
+            if (quantidade >= qtd)
+                quantidade -= qtd;
             else
                 throw new Exception();
         }
         public string Imprimir()
         {
-            return String.Format("{0} - {1} - R${2} - {3}", id, nome, preco, Quantidade);
+            return String.Format("Produto {0}: {1} - R${2} - Estoque: {3}", id, nome, Math.Round(Preco,2), Quantidade);
         }
     }
 }

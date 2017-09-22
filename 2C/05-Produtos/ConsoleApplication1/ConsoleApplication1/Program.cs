@@ -10,7 +10,7 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Produto p = new Produto(1, "Sabonete O Cara 100g", 10.00);
+            Produto p = new Produto(1, "Sabonete O Cara 100g", 10.123432);
             p.Reposicao(100);
             p.Retirada(20);
 

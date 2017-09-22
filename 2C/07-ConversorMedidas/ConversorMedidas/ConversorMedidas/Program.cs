@@ -11,9 +11,9 @@ namespace ConversorMedidas
         static void Main(string[] args)
         {
             Console.WriteLine("Informe o valor da medida a ser convertida");
-            Conversor.Valor = Console.ReadLine();
-            Console.WriteLine(Conversor.ToKg());
+            Console.WriteLine(Conversor.ParaF(Console.ReadLine()));
             
+
         }
     }
 }

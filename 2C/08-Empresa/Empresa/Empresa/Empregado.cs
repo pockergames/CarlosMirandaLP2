@@ -23,14 +23,25 @@ namespace Empresa
         public double Salario { get; set; }
 
         public string DataEntrada { get; set; }
-        public Gerente Superior { get; set; } = new Gerente();
-        
 
+        private Gerente superior = new Gerente();
+        public Gerente Superior
+        {
+            get
+            {
+                return superior;
+            }
+            set
+            {
+                superior = value;
+            }
+        }
         public Empregado (string registro, string idGerente)
         {
             this.registro = registro;
-            Superior.MudarRegistro(idGerente);
+            superior.MudarRegistro(idGerente);
         }
+
 
 
     }

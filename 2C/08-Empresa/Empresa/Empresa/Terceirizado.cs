@@ -6,25 +6,9 @@ using System.Threading.Tasks;
 
 namespace Empresa
 {
-    class Terceirizado
+    class Terceirizado : Empregado
     {
-        private string registro;
 
-        public string Registro
-        {
-            get
-            {
-                return registro;
-            }
-        }
-        public string Nome { get; set; }
-        public string Cpf { get; set; }
-        public string Email { get; set; }
-        public double Salario { get; set; }
-
-        public string DataEntrada { get; set; }
-
-        private Gerente superior = new Gerente();
         public Gerente Superior
         {
             get
@@ -38,7 +22,7 @@ namespace Empresa
         }
 
         public string EmpresaMatriz { get; set; }
-        public Terceirizado (string registro, string idGerente)
+        public Terceirizado (string registro, string idGerente) : base (registro, idGerente)
         {
             this.registro = registro;
             superior.MudarRegistro(idGerente);

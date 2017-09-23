@@ -10,10 +10,15 @@ namespace ConversorMedidas
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Informe o valor da medida a ser convertida");
-            Console.WriteLine(Conversor.ParaF(Console.ReadLine()));
-            
-
+            while (1 == 1)
+            {
+                Menu.Principal();
+            }
         }
-    }
+     }
 }
+        
+    
+
+
+

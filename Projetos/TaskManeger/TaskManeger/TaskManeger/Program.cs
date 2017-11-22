@@ -10,7 +10,7 @@ namespace TaskManeger
     {
         static void Main(string[] args)
         {
-            Tarefa[] tarefa = new Tarefa[8760];
+            Tarefa[] tarefaPorDia = new Tarefa[8760];
             Console.WriteLine("1 - Criar nova Tarefa");
             if (Console.ReadLine() == "1")
             {
@@ -31,7 +31,7 @@ namespace TaskManeger
 
             for (int id = 0; id< 8760; id++)
             {
-                tarefa[i] = new Tarefa("kk", 1);
+                tarefaPorDia[id] = new Tarefa("kk", 1);
             }
 
         }
